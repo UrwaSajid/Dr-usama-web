@@ -6,10 +6,10 @@ import ChapterList from '@/components/courses/ChapterList'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 import ComicDivider from '@/components/ui/ComicDivider'
 import AnnouncementFeed from '@/components/announcements/AnnouncementFeed'
-import { getCourse } from '@/lib/db/courses'
-import { listAnnouncements } from '@/lib/db/announcements'
+import { getCachedCourse } from '@/lib/db/courses'
+import { listCachedAnnouncements } from '@/lib/db/announcements'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 120
 
 interface Props {
   params: { slug: string }
@@ -26,8 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CourseDetailPage({ params }: Props) {
   const [course, announcements] = await Promise.all([
-    getCourse(params.slug),
-    listAnnouncements(),
+    getCachedCourse(params.slug),
+    listCachedAnnouncements(),
   ])
 
   if (!course) notFound()

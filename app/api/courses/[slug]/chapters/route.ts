@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
+import { revalidateTag } from 'next/cache'
 
 interface Params { params: { slug: string } }
 
@@ -34,5 +35,6 @@ export async function POST(request: Request, { params }: Params) {
     .single()
 
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
+  revalidateTag('courses')
   return NextResponse.json(data, { status: 201 })
 }

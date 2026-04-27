@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
+import { revalidateTag } from 'next/cache'
 
 interface Params { params: { slug: string } }
 
@@ -29,6 +30,7 @@ export async function PUT(request: Request, { params }: Params) {
     .single()
 
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
+  revalidateTag('courses')
   return NextResponse.json(data)
 }
 
@@ -39,5 +41,6 @@ export async function DELETE(_: Request, { params }: Params) {
 
   const { error } = await supabase.from('courses').delete().eq('slug', params.slug)
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
+  revalidateTag('courses')
   return NextResponse.json({ success: true })
 }

@@ -3,9 +3,9 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import CourseGrid from '@/components/courses/CourseGrid'
 import ScrollReveal from '@/components/ui/ScrollReveal'
-import { listCourses } from '@/lib/db/courses'
+import { listPublishedCourses } from '@/lib/db/courses'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 120
 
 export const metadata: Metadata = {
   title: 'Courses',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 }
 
 export default async function CoursesPage() {
-  const courses = await listCourses(true)
+  const courses = await listPublishedCourses()
 
   return (
     <>

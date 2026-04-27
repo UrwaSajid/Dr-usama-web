@@ -3,9 +3,9 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import AnnouncementFeed from '@/components/announcements/AnnouncementFeed'
 import ScrollReveal from '@/components/ui/ScrollReveal'
-import { listAnnouncements } from '@/lib/db/announcements'
+import { listCachedAnnouncements } from '@/lib/db/announcements'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 120
 
 export const metadata: Metadata = {
   title: 'Announcements',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 }
 
 export default async function AnnouncementsPage() {
-  const announcements = await listAnnouncements()
+  const announcements = await listCachedAnnouncements()
 
   return (
     <>

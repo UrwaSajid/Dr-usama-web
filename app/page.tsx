@@ -6,15 +6,15 @@ import CourseGrid from '@/components/courses/CourseGrid'
 import AnnouncementFeed from '@/components/announcements/AnnouncementFeed'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 import ComicDivider from '@/components/ui/ComicDivider'
-import { listCourses } from '@/lib/db/courses'
-import { listAnnouncements } from '@/lib/db/announcements'
+import { listPublishedCourses } from '@/lib/db/courses'
+import { listCachedAnnouncements } from '@/lib/db/announcements'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 120
 
 export default async function HomePage() {
   const [courses, announcements] = await Promise.all([
-    listCourses(true),
-    listAnnouncements(),
+    listPublishedCourses(),
+    listCachedAnnouncements(),
   ])
 
   return (

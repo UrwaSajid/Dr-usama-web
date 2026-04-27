@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
+import { revalidateTag } from 'next/cache'
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
@@ -33,5 +34,6 @@ export async function POST(request: Request) {
     .single()
 
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
+  revalidateTag('announcements')
   return NextResponse.json(data, { status: 201 })
 }
