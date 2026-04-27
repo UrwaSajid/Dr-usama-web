@@ -13,8 +13,11 @@ export async function POST() {
       return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
     }
 
-    const user          = session.user
-    const isProfessor   = user.email === process.env.NEXT_PUBLIC_PROFESSOR_EMAIL
+    const user            = session.user
+    const professorEmails = (process.env.NEXT_PUBLIC_PROFESSOR_EMAIL ?? '')
+      .split(',')
+      .map(e => e.trim().toLowerCase())
+    const isProfessor     = professorEmails.includes((user.email ?? '').toLowerCase())
 
     const admin = createAdminClient()
     const { error } = await admin.from('profiles').upsert(
