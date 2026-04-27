@@ -20,7 +20,7 @@ export default async function AnnouncementsPage() {
       <Navbar />
       <main className="pt-24 pb-16">
         {/* Header */}
-        <div className="bg-ink-900 border-b-4 border-coral-400 py-14 px-4 mb-16 relative overflow-hidden">
+        <div className="bg-ink-900 border-b-4 border-coral-400 py-10 sm:py-14 px-4 mb-10 sm:mb-16 relative overflow-hidden">
           <div
             className="absolute inset-0 opacity-[0.03]"
             style={{
@@ -35,7 +35,7 @@ export default async function AnnouncementsPage() {
                 Bulletin Board
               </div>
               <h1
-                className="font-comic text-5xl sm:text-6xl text-white"
+                className="font-comic text-3xl sm:text-5xl lg:text-6xl text-white"
                 style={{ textShadow: '4px 4px 0 #D85A30' }}
               >
                 Announcements

@@ -29,7 +29,7 @@ function CardTexture() {
 // ─── Card 01 — Welcome ────────────────────────────────────────────────────────
 function Card01() {
   return (
-    <div className="relative z-10 pl-16 pr-8 pt-3 pb-6 h-full flex flex-col justify-between">
+    <div className="relative z-10 pl-4 sm:pl-16 pr-4 sm:pr-8 pt-3 pb-6 h-full flex flex-col justify-between">
       <span className="font-mono text-[9px] text-coral-500 uppercase tracking-widest">
         Vol. 01 — Issue #001
       </span>
@@ -61,7 +61,7 @@ function Card01() {
 // ─── Card 02 — Professor's note ──────────────────────────────────────────────
 function Card02() {
   return (
-    <div className="relative z-10 pl-16 pr-8 pt-3 pb-6 h-full flex flex-col justify-between">
+    <div className="relative z-10 pl-4 sm:pl-16 pr-4 sm:pr-8 pt-3 pb-6 h-full flex flex-col justify-between">
       <span className="font-mono text-[9px] text-coral-500 uppercase tracking-widest">
         Professor's Note
       </span>
@@ -96,7 +96,7 @@ function Card02() {
 // ─── Card 03 — The 5-app problem ─────────────────────────────────────────────
 function Card03() {
   return (
-    <div className="relative z-10 pl-16 pr-8 pt-3 pb-6 h-full flex flex-col justify-between">
+    <div className="relative z-10 pl-4 sm:pl-16 pr-4 sm:pr-8 pt-3 pb-6 h-full flex flex-col justify-between">
       <span className="font-mono text-[9px] text-coral-500 uppercase tracking-widest">
         Before This Platform
       </span>
@@ -123,7 +123,7 @@ function Card03() {
 // ─── Card 04 — The solution ───────────────────────────────────────────────────
 function Card04() {
   return (
-    <div className="relative z-10 pl-16 pr-8 pt-3 pb-6 h-full flex flex-col justify-between">
+    <div className="relative z-10 pl-4 sm:pl-16 pr-4 sm:pr-8 pt-3 pb-6 h-full flex flex-col justify-between">
       <span className="font-mono text-[9px] text-coral-500 uppercase tracking-widest">
         The Solution
       </span>
@@ -236,7 +236,7 @@ export default function WelcomeCards() {
 
         {/* ── LEFT: static header + nav ───────────────────────── */}
         <div className="md:w-[320px] shrink-0 flex flex-col justify-between
-                        px-10 py-12 border-b-2 md:border-b-0 md:border-r-2 border-ink-700/40">
+                        px-4 sm:px-10 py-8 sm:py-12 border-b-2 md:border-b-0 md:border-r-2 border-ink-700/40">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -288,13 +288,13 @@ export default function WelcomeCards() {
         </div>
 
         {/* ── RIGHT: cue card stack ────────────────────────────── */}
-        <div className="flex-1 flex items-center justify-center px-8 py-12 md:px-14">
+        <div className="flex-1 flex items-center justify-center px-4 sm:px-8 py-8 sm:py-12 md:px-14">
           <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={isVisible ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="relative w-full"
-            style={{ maxWidth: 500, height: 320, perspective: '1000px' }}
+            style={{ maxWidth: '100%', height: 300, perspective: '1000px' }}
           >
 
             {/* ── Ghost cards — create the "stapled stack" depth ── */}

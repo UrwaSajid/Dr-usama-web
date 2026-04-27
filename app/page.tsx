@@ -28,13 +28,13 @@ export default async function HomePage() {
         <WelcomeCards />
 
         {/* COURSES SECTION */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
           <ScrollReveal>
             <div className="flex items-end justify-between mb-10">
               <div>
                 <span className="chapter-label block mb-1">The Universe</span>
                 <h2
-                  className="font-comic text-5xl text-ink-900"
+                  className="font-comic text-3xl sm:text-5xl text-ink-900"
                   style={{ textShadow: '3px 3px 0 #D85A30' }}
                 >
                   Active Courses
@@ -57,7 +57,7 @@ export default async function HomePage() {
         <ComicDivider label="Latest Intel" />
 
         {/* ANNOUNCEMENTS PREVIEW */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
           <ScrollReveal>
             <div className="mb-10">
               <span className="chapter-label block mb-1">From the Professor</span>
@@ -94,7 +94,7 @@ export default async function HomePage() {
             <div className="max-w-3xl mx-auto text-center">
               <span className="chapter-label text-coral-400 block mb-3">Final Page</span>
               <h2
-                className="font-comic text-5xl text-white mb-4"
+                className="font-comic text-3xl sm:text-5xl text-white mb-4"
                 style={{ textShadow: '3px 3px 0 #D85A30' }}
               >
                 Ready to Learn?

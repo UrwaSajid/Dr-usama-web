@@ -46,7 +46,7 @@ export default async function CourseDetailPage({ params }: Props) {
       <main className="pt-16">
         {/* Hero banner */}
         <div
-          className="relative py-20 px-4 border-b-4 border-ink-900 overflow-hidden"
+          className="relative py-12 sm:py-20 px-4 border-b-4 border-ink-900 overflow-hidden"
           style={{ background: course.color + '18' }}
         >
           {/* Halftone */}
@@ -72,7 +72,7 @@ export default async function CourseDetailPage({ params }: Props) {
             </div>
 
             <h1
-              className="font-comic text-5xl sm:text-7xl text-ink-900 leading-tight"
+              className="font-comic text-3xl sm:text-5xl lg:text-7xl text-ink-900 leading-tight"
               style={{ textShadow: `4px 4px 0 ${course.color}` }}
             >
               {course.title}
@@ -112,8 +112,8 @@ export default async function CourseDetailPage({ params }: Props) {
         </div>
 
         {/* Content area */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
 
             {/* Main: chapters */}
             <div className="lg:col-span-2">

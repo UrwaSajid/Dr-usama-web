@@ -60,7 +60,7 @@ export default function HeroSection() {
       />
 
       {/* ── Two-column grid ───────────────────────────────── */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-24
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24
                       grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-screen">
 
         {/* LEFT — text */}
@@ -176,7 +176,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.5, duration: 0.8 }}
-        className="absolute bottom-6 left-8 flex items-center gap-2 z-20"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20"
       >
         <div className="w-0.5 h-8 bg-gradient-to-b from-coral-400 to-transparent animate-bounce" />
         <span className="font-comic text-[10px] tracking-widest text-ink-400 uppercase">Scroll</span>

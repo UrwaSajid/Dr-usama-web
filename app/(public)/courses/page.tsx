@@ -20,7 +20,7 @@ export default async function CoursesPage() {
       <Navbar />
       <main className="pt-24 pb-32">
         {/* Page header */}
-        <div className="bg-ink-900 border-b-4 border-coral-400 py-16 px-4 mb-16 relative overflow-hidden">
+        <div className="bg-ink-900 border-b-4 border-coral-400 py-10 sm:py-16 px-4 mb-10 sm:mb-16 relative overflow-hidden">
           {/* Halftone bg */}
           <div
             className="absolute inset-0 opacity-[0.04]"
@@ -36,7 +36,7 @@ export default async function CoursesPage() {
                 The Classroom Universe
               </div>
               <h1
-                className="font-comic text-5xl sm:text-7xl text-white mt-2"
+                className="font-comic text-4xl sm:text-5xl lg:text-7xl text-white mt-2"
                 style={{ textShadow: '4px 4px 0 #D85A30' }}
               >
                 All Courses

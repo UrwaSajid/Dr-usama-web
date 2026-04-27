@@ -28,7 +28,7 @@ export default function CourseCard({ course, index = 0 }: CourseCardProps) {
     <motion.div
       variants={panelReveal}
       transition={{ delay: index * 0.12 }}
-      className="h-[440px]"
+      className="h-auto sm:h-[440px]"
     >
       <div
         ref={ref}
@@ -49,7 +49,7 @@ export default function CourseCard({ course, index = 0 }: CourseCardProps) {
         />
 
         {/* Card body */}
-        <div className="p-6 pt-8 flex flex-col flex-1">
+        <div className="p-4 sm:p-6 pt-6 sm:pt-8 flex flex-col flex-1">
           {/* Icon */}
           <div
             className="w-14 h-14 flex items-center justify-center text-3xl border-2 border-ink-900 rounded mb-4 shadow-ink-sm"
@@ -79,7 +79,7 @@ export default function CourseCard({ course, index = 0 }: CourseCardProps) {
           </p>
 
           {/* Footer */}
-          <div className="mt-5 pt-4 border-t-2 border-ink-100 flex items-center justify-between">
+          <div className="mt-5 pt-4 border-t-2 border-ink-100 flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <span className="ink-stamp text-coral-600 border-coral-300">
                 {chapterCount} {chapterCount === 1 ? 'Chapter' : 'Chapters'}

@@ -23,7 +23,7 @@ export default function AnnouncementFeed({ announcements }: AnnouncementFeedProp
       variants={staggerContainer}
       initial="hidden"
       animate="visible"
-      className="space-y-12"
+      className="space-y-8 sm:space-y-12"
     >
       {announcements.map((ann, idx) => (
         <motion.div
@@ -34,7 +34,7 @@ export default function AnnouncementFeed({ announcements }: AnnouncementFeedProp
         >
           {/* Avatar column */}
           <div className="flex-shrink-0 flex flex-col items-center gap-2">
-            <div className="w-12 h-12 rounded-full border-3 border-ink-900 bg-coral-50 shadow-ink-sm flex items-center justify-center overflow-hidden">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-3 border-ink-900 bg-coral-50 shadow-ink-sm flex items-center justify-center overflow-hidden">
               {ann.professor?.avatar_url ? (
                 <img src={ann.professor.avatar_url} alt="Professor" className="w-full h-full object-cover" />
               ) : (
