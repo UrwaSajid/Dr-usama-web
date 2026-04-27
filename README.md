@@ -260,7 +260,7 @@ Update Supabase Auth → URL Configuration:
 
 ## 📝 License
 
-MIT — built for Dr. Muhammad Usama, University of Agriculture Faisalabad.
+MIT — built for Dr. Muhammad Usama, National University of Computer and Emerging Sciences.
 
 ---
 
