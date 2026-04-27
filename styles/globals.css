@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Google Fonts ─────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Permanent+Marker&family=Lato:wght@300;400;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ─── CSS Custom Properties ────────────────────────── */
+:root {
+  --coral:        #D85A30;
+  --coral-light:  #FAECE7;
+  --coral-dark:   #993C1D;
+  --ink:          #2C2C2A;
+  --ink-mid:      #5F5E5A;
+  --ink-light:    #B4B2A9;
+  --paper:        #F7F5EE;
+
+  --border-ink:   2px solid #2C2C2A;
+  --border-coral: 2px solid #D85A30;
+
+  --shadow-ink:   3px 3px 0 #2C2C2A;
+  --shadow-coral: 3px 3px 0 #D85A30;
+  --shadow-lg:    6px 6px 0 #2C2C2A;
+}
+
+/* ─── Base Reset ───────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #F7F5EE;
+  color: #2C2C2A;
+  cursor: none;            /* custom cursor replaces default */
+  overflow-x: hidden;
+  line-height: 1.65;
+}
+
+/* Fallback cursor for touch */
+@media (hover: none) {
+  body { cursor: auto; }
+}
+
+/* ─── Typography Utilities ─────────────────────────── */
+.font-comic   { font-family: 'Bangers', cursive; letter-spacing: 0.04em; }
+.font-display { font-family: 'Permanent Marker', cursive; }
+.font-body    { font-family: 'Lato', sans-serif; }
+.font-mono    { font-family: 'JetBrains Mono', monospace; }
+
+/* ─── Selection ────────────────────────────────────── */
+::selection {
+  background: #D85A30;
+  color: #fff;
+}
+
+/* ─── Scrollbar ────────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F1EFE8; }
+::-webkit-scrollbar-thumb {
+  background: #D85A30;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: #993C1D; }
+
+/* ─── Focus ────────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid #D85A30;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ─── Link defaults ────────────────────────────────── */
+a { color: inherit; text-decoration: none; }
+
+/* ─── Image defaults ───────────────────────────────── */
+img { display: block; max-width: 100%; }
