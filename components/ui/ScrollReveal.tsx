@@ -1,16 +1,17 @@
 'use client'
 import { motion } from 'framer-motion'
+import type { TargetAndTransition } from 'framer-motion'
 import type { ReactNode } from 'react'
 
 type AnimationType = 'fadeUp' | 'slideLeft' | 'slideRight' | 'scale'
 
-const HIDDEN: Record<AnimationType, object> = {
+const HIDDEN: Record<AnimationType, TargetAndTransition> = {
   fadeUp:    { opacity: 0, y: 36 },
   slideLeft: { opacity: 0, x: -48 },
   slideRight:{ opacity: 0, x: 48 },
   scale:     { opacity: 0, scale: 0.9 },
 }
-const VISIBLE: Record<AnimationType, object> = {
+const VISIBLE: Record<AnimationType, TargetAndTransition> = {
   fadeUp:    { opacity: 1, y: 0 },
   slideLeft: { opacity: 1, x: 0 },
   slideRight:{ opacity: 1, x: 0 },
