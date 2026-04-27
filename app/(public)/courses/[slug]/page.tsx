@@ -16,7 +16,7 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const course = await getCourse(params.slug)
+  const course = await getCachedCourse(params.slug)
   if (!course) return { title: 'Course Not Found' }
   return {
     title: course.title,
